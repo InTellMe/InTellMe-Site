@@ -297,6 +297,7 @@ body {
     background: rgba(147, 51, 234, 0.05);
     border: 1px solid rgba(147, 51, 234, 0.2);
     border-radius: 1.5rem;
+    animation: fadeInUp 0.8s ease-out 0.3s backwards;
 }
 
 .featured-badge {

@@ -222,71 +222,23 @@ body {
     margin: 0 auto;
 }
 
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(147, 51, 234, 0.1);
-    border: 1px solid rgba(147, 51, 234, 0.3);
-    border-radius: 9999px;
-    color: var(--purple-400);
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    animation: fadeInUp 1s ease-out;
-}
-
-.hero-badge svg {
-    fill: currentColor;
-}
-
 .hero-title {
     font-size: 3rem;
     font-weight: 800;
     color: var(--white);
     letter-spacing: -0.025em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     line-height: 1.1;
-    animation: fadeInUp 1s ease-out 0.05s backwards;
+    animation: fadeInUp 1s ease-out;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--slate-400);
     max-width: 42rem;
-    margin: 0 auto 2rem;
+    margin: 0 auto 3rem;
     line-height: 1.75;
     animation: fadeInUp 1s ease-out 0.1s backwards;
-}
-
-.hero-subtitle strong {
-    color: var(--purple-400);
-    font-weight: 700;
-}
-
-.hero-features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem auto 3rem;
-    max-width: 48rem;
-    animation: fadeInUp 1s ease-out 0.15s backwards;
-}
-
-.hero-feature {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--slate-400);
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.hero-feature svg {
-    color: var(--purple-400);
-    flex-shrink: 0;
 }
 
 .hero-buttons {
@@ -328,6 +280,93 @@ body {
 
 .btn-secondary:hover {
     background: var(--slate-700);
+}
+
+/* Featured Platform Section */
+.featured {
+    padding: 4rem 0 6rem;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.featured-content {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background: rgba(147, 51, 234, 0.05);
+    border: 1px solid rgba(147, 51, 234, 0.2);
+    border-radius: 1.5rem;
+}
+
+.featured-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(147, 51, 234, 0.1);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    border-radius: 9999px;
+    color: var(--purple-400);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.featured-badge svg {
+    fill: currentColor;
+}
+
+.featured-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.025em;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.featured-subtitle {
+    font-size: 1.125rem;
+    color: var(--slate-400);
+    max-width: 42rem;
+    margin: 0 auto 2rem;
+    line-height: 1.75;
+}
+
+.featured-subtitle strong {
+    color: var(--purple-400);
+    font-weight: 700;
+}
+
+.featured-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto 2.5rem;
+    max-width: 48rem;
+}
+
+.featured-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--slate-400);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.featured-feature svg {
+    color: var(--purple-400);
+    flex-shrink: 0;
+}
+
+.featured-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 /* Projects Section */
@@ -621,10 +660,22 @@ body {
         font-size: 1rem;
     }
     
-    .hero-features {
+    .featured-title {
+        font-size: 2rem;
+    }
+    
+    .featured-subtitle {
+        font-size: 1rem;
+    }
+    
+    .featured-features {
         flex-direction: column;
         gap: 1rem;
         align-items: center;
+    }
+    
+    .featured-content {
+        padding: 2rem 1.5rem;
     }
     
     .section-header {

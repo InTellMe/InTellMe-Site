@@ -1,0 +1,9 @@
+Contact: mailto:security@intellmeai.com
+Contact: mailto:brandon@intellmeai.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://www.intellmeai.com/.well-known/security.txt
+
+# Security Policy for InTellMe
+# We take security seriously and appreciate responsible disclosure of any vulnerabilities.
+# Please report security issues to the contact addresses above.

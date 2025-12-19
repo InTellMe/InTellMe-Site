@@ -3,18 +3,15 @@
   publish = "."
   command = "echo 'No build step required for static site'"
 
-# Force HTTPS redirect
+# Force HTTPS redirect (preserves subdomain choice)
+# Note: Configure your preferred domain (www vs apex) in Netlify dashboard
+# This will only force HTTP to HTTPS, not change the domain
 [[redirects]]
-  from = "http://www.intellmeai.com/*"
-  to = "https://www.intellmeai.com/:splat"
+  from = "http://*"
+  to = "https://:splat"
   status = 301
   force = true
-
-[[redirects]]
-  from = "http://intellmeai.com/*"
-  to = "https://www.intellmeai.com/:splat"
-  status = 301
-  force = true
+  conditions = {scheme = ["http"]}
 
 # Headers for security
 [[headers]]

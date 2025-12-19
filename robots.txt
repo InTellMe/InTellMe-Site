@@ -1,0 +1,8 @@
+# robots.txt for InTellMe AI
+# https://www.intellmeai.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.intellmeai.com/sitemap.xml

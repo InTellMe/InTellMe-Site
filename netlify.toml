@@ -1,0 +1,26 @@
+# Netlify configuration for InTellMe site
+[build]
+  publish = "."
+  command = "echo 'No build step required for static site'"
+
+# Force HTTPS redirect (preserves subdomain choice)
+# Note: Configure your preferred domain (www vs apex) in Netlify dashboard
+# This will only force HTTP to HTTPS, not change the domain
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
+  conditions = {scheme = ["http"]}
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"

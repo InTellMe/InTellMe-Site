@@ -34,6 +34,17 @@ python3 -m http.server 8080
 
 Then visit `http://localhost:8080` in your browser.
 
+## Security & HTTPS
+
+This site implements security best practices including:
+- HTTPS enforcement (configuration files for various hosting platforms included)
+- Content Security Policy (CSP)
+- Security headers (HSTS, X-Frame-Options, X-Content-Type-Options, etc.)
+- Security.txt for responsible disclosure
+
+For deployment instructions with HTTPS configuration, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
 ## Contact
 - Website: [www.intellmeai.com](https://www.intellmeai.com)
 - Email: contact@intellmeai.com
+- Security: security@intellmeai.com

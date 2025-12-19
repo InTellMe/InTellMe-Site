@@ -238,8 +238,8 @@ body {
     width: 500px;
     height: 500px;
     object-fit: contain;
-    opacity: 0.08;
-    filter: grayscale(0.3);
+    opacity: 0.15;
+    filter: grayscale(0.2);
 }
 
 .hero-content {
@@ -763,7 +763,7 @@ body {
     .backdrop-logo-image {
         width: 300px;
         height: 300px;
-        opacity: 0.06;
+        opacity: 0.12;
     }
     
     .hero-backdrop-logo {

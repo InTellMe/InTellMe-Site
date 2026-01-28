@@ -34,6 +34,14 @@ python3 -m http.server 8080
 
 Then visit `http://localhost:8080` in your browser.
 
+## SEO & Search Optimization
+
+The site includes comprehensive SEO features:
+- **Sitemap**: XML sitemap available at [https://www.intellmeai.com/sitemap.xml](https://www.intellmeai.com/sitemap.xml)
+- **Robots.txt**: Properly configured robots.txt with sitemap reference
+- **Meta Tags**: Complete meta descriptions, keywords, and Open Graph tags
+- All pages are indexed and optimized for search engines
+
 ## Security & HTTPS
 
 This site implements security best practices including:

@@ -54,7 +54,7 @@
             if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
 
             // Mouse Interaction (Stiffness/Repulsion)
-            if (mouse.x != null) {
+            if (mouse.x !== null) {
                 let dx = mouse.x - this.x;
                 let dy = mouse.y - this.y;
                 let distance = Math.sqrt(dx * dx + dy * dy);
@@ -107,7 +107,7 @@
     // Draw lines between close particles
     const connectParticles = () => {
         for (let a = 0; a < particles.length; a++) {
-            for (let b = a; b < particles.length; b++) {
+            for (let b = a + 1; b < particles.length; b++) {
                 let dx = particles[a].x - particles[b].x;
                 let dy = particles[a].y - particles[b].y;
                 let distance = Math.sqrt(dx * dx + dy * dy);

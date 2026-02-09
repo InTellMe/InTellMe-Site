@@ -25,6 +25,38 @@ A modern tech portfolio website showcasing InTellMe and its innovative ventures.
 - CSS3 (with modern features like CSS Grid, Flexbox, and animations)
 - Vanilla JavaScript (smooth scrolling, intersection observer)
 
+## Styling & Theme
+
+This site uses a premium, sophisticated design aesthetic inspired by [Lane Vector](https://www.lanevector.com), a research initiative by Michael Brandon Lane focused on mathematical foundations of behavioral and temporal dynamics. The design emphasizes professionalism, clarity, and elegance.
+
+### Color Palette
+- **Primary Background**: `#08071c` (dark indigo blue) - A rich, deep background that exudes sophistication
+- **Primary Text**: `#ffffff` (white) - Clean, high-contrast text for optimal readability
+- **Accent Color**: `#db0d0d` (orange-red) - Strategic use for CTAs and highlights
+- **Particle Network**: Cyan particles `rgba(6, 182, 212)` - Animated kinematic background
+- **Supporting Colors**: Slate/blue tones for secondary elements
+
+### Typography
+- **Headings**: Georgia, Times New Roman (serif fonts) - Elegant, timeless typography for titles and headings
+- **Body Text**: Helvetica Neue, Arial (sans-serif) - Clean, modern fonts for optimal readability
+- **No External Fonts**: Uses system fonts only for optimal performance and fast loading
+
+### Kinematic Particle Network Background
+The site features an animated particle network background that matches Lane Vector's aesthetic:
+- **80 Animated Particles**: Cyan-colored nodes that move smoothly across the canvas
+- **Dynamic Connections**: Lines automatically form between nearby particles, creating a network effect
+- **Mouse Interaction**: Particles respond to cursor movement, creating an interactive experience
+- **Physics-Based Animation**: Smooth, natural movement with boundary collision detection
+- **Performance Optimized**: Canvas-based rendering at 60fps with minimal CPU impact
+
+### Design Principles
+- Premium dark theme with sophisticated color palette
+- Generous spacing and professional layout
+- Smooth animations and transitions
+- Kinematic particle network background for depth and visual interest
+- Responsive design optimized for all devices
+- Accessible design following WCAG guidelines
+
 ## Local Development
 Simply open `index.html` in a web browser or run a local server:
 

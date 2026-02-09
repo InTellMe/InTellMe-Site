@@ -1,3 +1,134 @@
+// Kinematic Network Background
+(function() {
+    const canvas = document.getElementById('kinetic-background');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    let animationFrameId;
+    let particles = [];
+    
+    // CONFIGURATION: The "Physics" of the System
+    const PARTICLE_COUNT = 80; // Increased from 60 for more nodes
+    const CONNECTION_RADIUS = 150; // "Semantic Relevance Threshold"
+    const MOUSE_RADIUS = 200; // "Flux Influence"
+    const BASE_VELOCITY = 0.5; // "System Temperature"
+
+    // Resize handling
+    const resizeCanvas = () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    };
+    
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Mouse tracking (The "Observer")
+    let mouse = { x: null, y: null };
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+    });
+    window.addEventListener('mouseout', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+
+    // Particle Class
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * BASE_VELOCITY;
+            this.vy = (Math.random() - 0.5) * BASE_VELOCITY;
+            this.size = Math.random() * 2 + 1;
+            this.energy = Math.random(); // Alpha value
+        }
+
+        update() {
+            // Standard Kinetics (Movement)
+            this.x += this.vx;
+            this.y += this.vy;
+
+            // Boundary Conditions (Bounce off walls)
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+            // Mouse Interaction (Stiffness/Repulsion)
+            if (mouse.x !== null) {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < MOUSE_RADIUS) {
+                    const forceDirectionX = dx / distance;
+                    const forceDirectionY = dy / distance;
+                    const force = (MOUSE_RADIUS - distance) / MOUSE_RADIUS;
+                    const directionX = forceDirectionX * force * this.size;
+                    const directionY = forceDirectionY * force * this.size;
+
+                    this.x -= directionX; // Move away from mouse
+                    this.y -= directionY;
+                }
+            }
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(6, 182, 212, ${this.energy * 0.5})`; // Cyan-500
+            ctx.fill();
+        }
+    }
+
+    // Initialize System
+    const init = () => {
+        particles = [];
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push(new Particle());
+        }
+    };
+
+    // The Animation Loop (The Solver)
+    const animate = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Update and Draw Particles
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+
+        // Draw Connections (The Network)
+        connectParticles();
+        
+        animationFrameId = requestAnimationFrame(animate);
+    };
+
+    // Draw lines between close particles
+    const connectParticles = () => {
+        for (let a = 0; a < particles.length; a++) {
+            for (let b = a + 1; b < particles.length; b++) {
+                let dx = particles[a].x - particles[b].x;
+                let dy = particles[a].y - particles[b].y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < CONNECTION_RADIUS) {
+                    let opacity = 1 - (distance / CONNECTION_RADIUS);
+                    ctx.strokeStyle = `rgba(6, 182, 212, ${opacity * 0.2})`; // Faint Cyan
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(particles[a].x, particles[a].y);
+                    ctx.lineTo(particles[b].x, particles[b].y);
+                    ctx.stroke();
+                }
+            }
+        }
+    };
+
+    init();
+    animate();
+})();
+
 // Mobile menu functionality
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');

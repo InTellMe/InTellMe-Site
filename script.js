@@ -75,7 +75,7 @@
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(6, 182, 212, ${this.energy * 0.5})`; // Cyan-500
+            ctx.fillStyle = `rgba(6, 182, 212, ${this.energy * 0.8})`; // Cyan-500 with increased opacity
             ctx.fill();
         }
     }
@@ -114,7 +114,7 @@
 
                 if (distance < CONNECTION_RADIUS) {
                     let opacity = 1 - (distance / CONNECTION_RADIUS);
-                    ctx.strokeStyle = `rgba(6, 182, 212, ${opacity * 0.2})`; // Faint Cyan
+                    ctx.strokeStyle = `rgba(6, 182, 212, ${opacity * 0.4})`; // Increased opacity for better visibility
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particles[a].x, particles[a].y);

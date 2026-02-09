@@ -27,7 +27,7 @@ A modern tech portfolio website showcasing InTellMe and its innovative ventures.
 
 ## Styling & Theme
 
-This site uses a premium, sophisticated design aesthetic inspired by Lane Vector's professional appearance:
+This site uses a premium, sophisticated design aesthetic inspired by [Lane Vector](https://www.lanevector.com), a research initiative by Michael Brandon Lane focused on mathematical foundations of behavioral and temporal dynamics. The design emphasizes professionalism, clarity, and elegance.
 
 ### Color Palette
 - **Primary Background**: `#08071c` (dark indigo blue) - A rich, deep background that exudes sophistication

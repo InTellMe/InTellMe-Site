@@ -48,19 +48,24 @@ html {
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
     line-height: 1.6;
     color: var(--primary-text);
     background-color: var(--bg-color);
     min-height: 100vh;
 }
 
-/* Typography - Serif fonts for headings */
+/* Typography - Brand fonts */
 h1, h2, h3, h4, h5, h6,
 .hero-title,
 .section-header h2,
-.logo-text {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.featured-title {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+.logo-text,
+.footer-brand-text {
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
 }
 
 /* Kinematic Network Background */
@@ -124,13 +129,14 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .logo-text {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 1.625rem;
+    font-weight: 600;
     background: linear-gradient(to right, var(--white), var(--slate-400));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    letter-spacing: -0.025em;
+    letter-spacing: 0.02em;
 }
 
 .nav-links {
@@ -699,6 +705,11 @@ h1, h2, h3, h4, h5, h6,
 
 .footer-link:hover {
     color: var(--white);
+}
+
+/* Notebook Accent - Nanum Brush Script (for Author's Notes / Insight callouts) */
+.notebook-accent {
+    font-family: 'Nanum Brush Script', cursive;
 }
 
 /* Utility Classes */

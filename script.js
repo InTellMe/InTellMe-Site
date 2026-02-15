@@ -8,7 +8,7 @@
     let particles = [];
     
     // CONFIGURATION: The "Physics" of the System
-    const PARTICLE_COUNT = 80; // Increased from 60 for more nodes
+    const PARTICLE_COUNT = 120; // Increased from 80 for more nodes
     const CONNECTION_RADIUS = 150; // "Semantic Relevance Threshold"
     const MOUSE_RADIUS = 200; // "Flux Influence"
     const BASE_VELOCITY = 0.5; // "System Temperature"
@@ -75,7 +75,7 @@
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(6, 182, 212, ${this.energy * 0.8})`; // Cyan-500 with increased opacity
+            ctx.fillStyle = `rgba(6, 182, 212, ${this.energy * 1.0})`; // Increased opacity for better visibility
             ctx.fill();
         }
     }
@@ -114,7 +114,7 @@
 
                 if (distance < CONNECTION_RADIUS) {
                     let opacity = 1 - (distance / CONNECTION_RADIUS);
-                    ctx.strokeStyle = `rgba(6, 182, 212, ${opacity * 0.4})`; // Increased opacity for better visibility
+                    ctx.strokeStyle = `rgba(6, 182, 212, ${opacity * 0.5})`; // Increased opacity for better visibility
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particles[a].x, particles[a].y);

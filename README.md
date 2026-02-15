@@ -16,7 +16,7 @@ A modern tech portfolio website showcasing InTellMe and its innovative ventures.
   - [Yoohoo.Guru](https://www.yoohoo.guru) - Community skill-sharing and local services platform
   - [The wAether App](https://www.waether.space) - Beautiful, minimalist weather forecasting
   - [OMFG](https://www.intellmeai.com/probot) - Oh My Forking Git - Automated fork monitoring
-  - [SAVR](https://www.pantryhustler.com) - AI-powered personalized meal planning
+  - [SAVR](https://savr.cam) - AI-powered personalized meal planning
   - [Golden Goose Tees](https://www.goldengoosetees.com) - Premium custom apparel service
   - [Pink Pickle Rodeo](https://www.pinkpicklerodeo.lol) - Whimsical digital entertainment experience
 
